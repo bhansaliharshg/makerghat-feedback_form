@@ -1,0 +1,38 @@
+/* .image {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.center {
+    height: 100%;
+    position: absolute;
+    padding: 2rem;
+}
+
+.header-name {
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    display: block ruby;
+} */
+
+.row {
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+    color: #fff !important;
+    font-size: 3.8vw;
+    font-weight: bold;
+}
+
+.internal {
+    margin: auto;
+    text-align: center;
+}
+
+.backgroundImage {
+    width: 99%;
+    height: 15rem;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
+}

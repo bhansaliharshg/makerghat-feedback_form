@@ -1,0 +1,46 @@
+<form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <label for="teacher_name required">Name of the Teacher</label>
+        <select id="teacher_name" formControlName="teacherName" required>
+            <option value="" selected>Choose</option>
+            <option *ngFor="let teacher of teachers" value={{teacher}}>{{teacher}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <label for="activity_name required">Activity covered in today's class</label>
+        <select id="activity_name" formControlName="activityName" required>
+            <option value="" selected>Choose</option>
+            <option *ngFor="let activity of activites" value={{activity}}>{{activity}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <label for="number_of_total_students required">How many students came to class today?</label>
+        <input id="number_of_total_students" formControlName="totalStudents" type="number" min="0" required>
+    </div>
+    <div class="row">
+        <label for="number_of_female_students required">How many girls came to class today?</label>
+        <input id="number_of_female_students" formControlName="femaleStudents" type="number" min="0" required>
+    </div>
+    <div class="row">
+        <label for="number_of_groups_formed required">How many groups were formed in class today?</label>
+        <input id="number_of_groups_formed" formControlName="totalGroupsFormed" type="number" min="0" required>
+    </div>
+    <div class="row">
+        <label for="number_of_groups_completed_activity required">How many groups completed the activity today?</label>
+        <input id="number_of_groups_completed_activity" formControlName="groupsCompletedActivity" type="number" min="0"
+            required>
+    </div>
+    <div class="row">
+        <label for="studnet_response_after_class required">Pick 1 or 2 words to describe how most students felt after class</label>
+        <select id="studnet_response_after_class" formControlName="studentResponse" required multiple style="resize: none;">
+            <option *ngFor="let response of responses" value={{response}}>{{response}}</option>
+        </select>
+    </div>
+    <div class="row">
+        <label for="anything_else">Anything else you want to share (highlights, challenges, or suggestions)?</label>
+        <textarea id="anything_else" formControlName="anythingElse" rows="4" cols="50" style="resize: none;"></textarea>
+    </div>
+    <div class="row">
+        <button type="submit" [disabled]="feedbackForm.status == 'VALID' ? true : null">Submit</button>
+    </div>
+</form>
