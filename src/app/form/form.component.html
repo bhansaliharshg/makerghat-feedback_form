@@ -14,27 +14,33 @@
         </select>
     </div>
     <div class="row">
-        <label for="number_of_total_students required">How many students came to class today? / இன்று எத்தனை மாணவர்கள் வகுப்பிற்கு வந்தனர்?</label>
+        <label for="number_of_total_students required">How many students came to class today? / இன்று எத்தனை மாணவர்கள்
+            வகுப்பிற்கு வந்தனர்?</label>
         <input id="number_of_total_students" formControlName="totalStudents" type="number" min="0" required>
     </div>
     <div class="row">
-        <label for="number_of_female_students required">How many girls came to class today? / இன்று எத்தனை பெண்கள் வகுப்பிற்கு வந்தனர்?</label>
+        <label for="number_of_female_students required">How many girls came to class today? / இன்று எத்தனை பெண்கள்
+            வகுப்பிற்கு வந்தனர்?</label>
         <input id="number_of_female_students" formControlName="femaleStudents" type="number" min="0" required>
     </div>
     <div class="row">
-        <label for="number_of_groups_formed required">How many groups were formed in class today? / இன்று வகுப்பில் எத்தனை குழுக்கள் உருவாக்கப்பட்டன?</label>
+        <label for="number_of_groups_formed required">How many groups were formed in class today? / இன்று வகுப்பில்
+            எத்தனை குழுக்கள் உருவாக்கப்பட்டன?</label>
         <input id="number_of_groups_formed" formControlName="totalGroupsFormed" type="number" min="0" required>
     </div>
     <div class="row">
-        <label for="number_of_groups_completed_activity required">How many groups completed the activity today? / இன்று எத்தனை குழுக்கள் செயல்பாட்டை முடித்துள்ளன</label>
+        <label for="number_of_groups_completed_activity required">How many groups completed the activity today? / இன்று
+            எத்தனை குழுக்கள் செயல்பாட்டை முடித்துள்ளன</label>
         <input id="number_of_groups_completed_activity" formControlName="groupsCompletedActivity" type="number" min="0"
             required>
     </div>
     <div class="row">
-        <label for="studnet_response_after_class required">Pick 1 or 2 words to describe how most students felt after class / வகுப்பிற்குப் பிறகு பெரும்பாலான மாணவர்கள் எப்படி உணர்ந்தார்கள் என்பதை விவரிக்க 1 அல்லது 2 வார்த்தைகளைத் தேர்ந்தெடுக்கவும்</label>
+        <label for="studnet_response_after_class required">Pick 1 or 2 words to describe how most students felt after
+            class / வகுப்பிற்குப் பிறகு பெரும்பாலான மாணவர்கள் எப்படி உணர்ந்தார்கள் என்பதை விவரிக்க 1 அல்லது 2
+            வார்த்தைகளைத் தேர்ந்தெடுக்கவும்</label>
         <div id="studnet_response_after_class" *ngFor="let o of studentResponseAfterClass.controls; let j=index">
-            <input type="checkbox" [formControl]="o"/> {{responses[j].response}}
-           </div>
+            <input type="checkbox" [formControl]="o" /> {{responses[j].response}}
+        </div>
         <!-- <div  formControlName="studentResponseAfterClass" *ngFor="let response of responses" required>
             <input type="checkbox"> {{response}}
         </div> -->
@@ -43,7 +49,8 @@
         </select> -->
     </div>
     <div class="row">
-        <label for="anything_else">Anything else you want to share (highlights, challenges, or suggestions)? / வேறு எதையாவது நீங்கள் பகிர விரும்புகிறீர்களா (சிறப்பம்சங்கள், சவால்கள் அல்லது பரிந்துரைகள்)? (optional)</label>
+        <label for="anything_else">Anything else you want to share (highlights, challenges, or suggestions)? / வேறு
+            எதையாவது நீங்கள் பகிர விரும்புகிறீர்களா (சிறப்பம்சங்கள், சவால்கள் அல்லது பரிந்துரைகள்)? (optional)</label>
         <textarea id="anything_else" formControlName="anythingElse" rows="4" cols="50" style="resize: none;"></textarea>
     </div>
     <div class="row">
